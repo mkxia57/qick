@@ -1899,7 +1899,7 @@ class AcquireMixin:
         # configure tproc for internal/external start
         soc.start_src(start_src)
 
-        total_count = functools.reduce(operator.mul, self.loop_dims)
+        total_count = functools.reduce(operator.mul, self.loop_dims) # todo: total count should consider different channels' count can be different
 
         # Initialize data buffers
         # buffer for decimated data
